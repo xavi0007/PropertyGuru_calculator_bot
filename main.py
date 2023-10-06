@@ -1,6 +1,8 @@
 from telegram_bot import PropertyBot
-TOKEN ="XYZ"# get token from command-line
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
+TOKEN = os.getenv('TOKEN')
 
 if __name__ == "__main__":
     telebot = PropertyBot(TOKEN)
